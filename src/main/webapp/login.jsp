@@ -105,8 +105,8 @@
             ${message}
         </div>
         <%
-        }
-        else {
+            }
+            else {
         %>
 
         <%

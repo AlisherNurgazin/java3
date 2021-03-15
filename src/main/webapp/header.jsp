@@ -20,7 +20,7 @@
         }
         .navbar {
             color: #fff;
-            background: black !important;
+            background: darkslategray !important;
             padding: 5px 16px;
             border-radius: 0;
             border: none;
@@ -188,17 +188,16 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <a href="index.jsp" class="navbar-brand"><i class="fa fa-film"></i>Kino<b>Park</b></a>
+    <a href="index.jsp" class="navbar-brand">TiketON</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 
         <div class="navbar-nav ml-auto">
-            <a href="index.jsp" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Main</span></a>
-            <a href="films.jsp" class="nav-item nav-link active"><i class="fa fa-film"></i><span>Films</span></a>
-            <a href="about.jsp" class="nav-item nav-link active"><i class="fa fa-info"></i><span>About</span></a>
+            <a href="index.jsp" class="nav-item nav-link active"></i><span>Main</span></a>
+            <a href="films.jsp" class="nav-item nav-link active"></i><span>Films</span></a>
+            <a href="about.jsp" class="nav-item nav-link active"></i><span>About</span></a>
             <div class="nav-item dropdown" style="padding-top: 5px">
                 <%
                     String username = (String) session.getAttribute("username");
@@ -210,23 +209,22 @@
                 <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">${username}<b class="caret"></b></a>
                 <div class="dropdown-menu">
                     <%
-                        if (username != "Guest") {%>
+                    if (username != "Guest") {%>
                     <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
                     <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Tickets</a>
                     <div class="divider dropdown-divider"></div>
 
-                    <a href="logout" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+                    <a href="logout" class="dropdown-item"> Logout</a>
 
                     <%
                     } else {
                     %>
-                    <a href="login.jsp" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Login</a>
-                    <a href="register.jsp" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Register</a>
+                    <a href="login.jsp" class="dropdown-item"> Login</a>
+                    <a href="register.jsp" class="dropdown-item"> Register</a>
                     <%}
                     %>
 
-
-                </div>
+                    </div>
             </div>
         </div>
     </div>

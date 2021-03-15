@@ -44,7 +44,7 @@
             color: #fff;
         }
     </style>
-</head>
+    </head>
 
 <body>
 <jsp:include page="header.jsp"></jsp:include>
