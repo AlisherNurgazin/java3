@@ -188,22 +188,20 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <a href="index.jsp" class="navbar-brand"><i class="fa fa-film"></i>Ticket<b>On</b></a>
+    <a href="index.jsp" class="navbar-brand">Ticket<i class="fa fa-play-circle"></i>n</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Collection of nav links, forms, and other content for toggling -->
+
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 
         <div class="navbar-nav ml-auto">
             <a href="index.jsp" class="nav-item nav-link active"></i><span>Main</span></a>
-<%--            <i class="fa fa-home">--%>
-            <a href="films.jsp" class="nav-item nav-link active"></i><span>Films</span></a>
-<%--            <i class="fa fa-film">--%>
             <a href="about.jsp" class="nav-item nav-link active"></i><span>About</span></a>
-<%--            <i class="fa fa-info">--%>
+            <a href="films.jsp" class="nav-item nav-link active"></i><span>Films</span></a>
+
             <div class="nav-item dropdown" style="padding-top: 5px">
-                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">USERNAME<b class="caret"></b></a>
+                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">Profile<b class="caret"></b></a>
                 <div class="dropdown-menu">
                     <a href="#" class="dropdown-item"></i> Profile</a>
                     <a href="#" class="dropdown-item"></i> Tickets</a>
