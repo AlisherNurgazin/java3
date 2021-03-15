@@ -89,6 +89,22 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block" name = "submit" value="register"> Create Account  </button>
                 </div> <!-- form-group// -->
+                <%
+                    String message = (String) request.getAttribute("message");
+                    if (message != null) {
+
+                %>
+                <div class="alert alert-danger" role="alert">
+                    ${message}
+                </div>
+                <%
+                }
+                else {
+                %>
+
+                <%
+                    }
+                %>
                 <p class="text-center">Have an account? <a href="login.jsp">Log In</a> </p>
             </form>
         </article>
