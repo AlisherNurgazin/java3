@@ -44,7 +44,7 @@
             color: #fff;
         }
     </style>
-    </head>
+</head>
 
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -54,12 +54,12 @@
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title mt-3 text-center">Create Account</h4>
 
-            <form action="register">
+            <form action="register" method="post">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="username" class="form-control" placeholder="Full name" type="text">
+                    <input name="username" class="form-control" placeholder="Username" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">

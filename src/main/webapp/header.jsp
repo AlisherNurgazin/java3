@@ -16,11 +16,11 @@
     <style>
         body {
             background: #eeeeee;
-            font-family: 'Roboto';
+            font-family: 'Varela Round', sans-serif;
         }
         .navbar {
             color: #fff;
-            background: darkslategray !important;
+            background: black !important;
             padding: 5px 16px;
             border-radius: 0;
             border: none;
@@ -188,7 +188,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <a href="index.jsp" class="navbar-brand"><i class="fa fa-film"></i>Ticket<b>On</b></a>
+    <a href="index.jsp" class="navbar-brand"><i class="fa fa-film"></i>Kino<b>Park</b></a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -196,9 +196,9 @@
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 
         <div class="navbar-nav ml-auto">
-            <a href="index.jsp" class="nav-item nav-link active"></i><span>Main</span></a>
-            <a href="films.jsp" class="nav-item nav-link active"></i><span>Films</span></a>
-            <a href="about.jsp" class="nav-item nav-link active"></i><span>About</span></a>
+            <a href="index.jsp" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Main</span></a>
+            <a href="films.jsp" class="nav-item nav-link active"><i class="fa fa-film"></i><span>Films</span></a>
+            <a href="about.jsp" class="nav-item nav-link active"><i class="fa fa-info"></i><span>About</span></a>
             <div class="nav-item dropdown" style="padding-top: 5px">
                 <%
                     String username = (String) session.getAttribute("username");
@@ -207,14 +207,25 @@
                         session.setAttribute("username", "Guest");
                     }
                 %>
-                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">USERNAME<b class="caret"></b></a>
+                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">${username}<b class="caret"></b></a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item"></i> Profile</a>
-                    <a href="#" class="dropdown-item"></i> Tickets</a>
+                    <%
+                        if (username != "Guest") {%>
+                    <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+                    <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Tickets</a>
                     <div class="divider dropdown-divider"></div>
-                    <a href="login.jsp" class="dropdown-item"></i> Login</a>
-                    <a href="register.jsp" class="dropdown-item"></i> Register</a>
-                    <a href="logout" class="dropdown-item"></i> Logout</a>
+
+                    <a href="logout" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
+
+                    <%
+                    } else {
+                    %>
+                    <a href="login.jsp" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Login</a>
+                    <a href="register.jsp" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Register</a>
+                    <%}
+                    %>
+
+
                 </div>
             </div>
         </div>
